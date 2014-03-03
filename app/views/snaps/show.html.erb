@@ -1,0 +1,5 @@
+<ul>
+  <% @snaps.each do |snap| %>
+  <li><%= image_tag snap.image.url(:medium) %></li>
+  <% end %>
+</ul>
