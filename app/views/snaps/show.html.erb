@@ -1,5 +1,8 @@
 <ul>
   <% @snaps.reverse.each do |snap| %>
-  <li><%= image_tag snap.image.url(:medium) %></li>
+  <li>
+  <%= image_tag snap.image.url(:medium) %> <br>
+  <%= snap.description %>
+  </li>
   <% end %>
 </ul>

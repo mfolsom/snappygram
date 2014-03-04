@@ -1,8 +1,8 @@
 Feature: Upload photos
 
 Scenario: can upload and save a photo
-Given I upload a new photo
-Then I can see that photo
+Given I upload a new photo and add a description
+Then I can see that photo and the description
 
 Scenario: user can see the photos in the timeline
 Given I upload multiple photos

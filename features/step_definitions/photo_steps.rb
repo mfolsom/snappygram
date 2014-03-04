@@ -1,11 +1,13 @@
-Given(/^I upload a new photo$/) do
+Given(/^I upload a new photo and add a description$/) do
   visit snaps_new_path
   attach_file("snap[image]", File.join(File.dirname(__FILE__), "../images/ave_page_load.png"))
+  fill_in("snap[description]", :with => "some description")
   click_button 'Upload Snap'
 end
 
-Then(/^I can see that photo$/) do
+Then(/^I can see that photo and the description$/) do
   expect(page).to have_xpath("//img")
+  expect(page).to have_content("some description")
 end
 
 Given(/^I upload multiple photos$/) do
