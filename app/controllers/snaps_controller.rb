@@ -12,6 +12,14 @@ class SnapsController < ApplicationController
     @snaps = Snap.all
   end
 
+  def detail
+    render :show_detail
+  end
+
+  def show_detail
+    @snap = Snap.find(params[:id])
+  end
+
 private
   def snap_params
     params.require(:snap).permit(:image,:description)
