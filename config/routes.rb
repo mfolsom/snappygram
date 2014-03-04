@@ -1,5 +1,6 @@
 Snappygram::Application.routes.draw do
 
+  devise_for :users
   get "snaps/new"
   post "snaps/new" => "snaps#create"
   get "snaps/detail", as: :snaps_detail
