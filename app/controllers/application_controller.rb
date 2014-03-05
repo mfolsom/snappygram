@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_filter :authenticate_user!, :except => [:show]
+  before_filter :authenticate_user!, :except => [:show, :show_detail]
   
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
