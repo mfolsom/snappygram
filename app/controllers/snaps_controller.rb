@@ -4,8 +4,7 @@ class SnapsController < ApplicationController
   end
 
   def create
-    @snap = Snap.new( snap_params )
-    @snap.user = current_user
+    @snap = Snap.new( snap_params.merge(user: current_user) )
     @snap.save
     redirect_to root_path
   end

@@ -58,7 +58,7 @@ Then(/^I should not see upload snap page$/) do
 end
 
 Then(/^who uploaded it$/) do
-  expect(page).to have_content("Uploaded by exampleuser ")
+  expect(page).to have_content("Uploaded by exampleuser")
 end
 
 
