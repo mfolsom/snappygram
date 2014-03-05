@@ -20,6 +20,7 @@ Given(/^I upload multiple photos$/) do
 end
 
 Then(/^I can see all of them in decreasing order$/) do
+  visit '/'
   first = page.all(:xpath, "//img").first[:src]
   second = page.all(:xpath, "//img").last[:src]
   expect(first).to eq(Snap.last.image.url(:medium))
