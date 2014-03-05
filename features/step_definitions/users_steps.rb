@@ -19,3 +19,4 @@ Given(/^I am logged in$/) do
   fill_in('user[password_confirmation]', :with => 'password')
   click_button 'Sign up'
 end
+

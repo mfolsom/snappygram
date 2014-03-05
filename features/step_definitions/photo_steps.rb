@@ -53,6 +53,23 @@ Then(/^I should see a login form$/) do
   expect(page).to have_content('You need to sign in or sign up before continuing.')
 end
 
-Then(/^I should not see upload snap page$/) do 
+Then(/^I should not see upload snap page$/) do
   expect(page).not_to have_content('Upload Snap')
 end
+
+Then(/^who uploaded it$/) do
+  expect(page).to have_content("Uploaded by exampleuser ")
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
