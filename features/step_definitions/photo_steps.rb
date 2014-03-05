@@ -39,3 +39,19 @@ Then(/^that particular snap$/) do
   expect(page).to have_xpath("//img[@src='#{@clicked_image}']")
   expect(page).to have_content("some description")
 end
+
+Given(/^I am not logged in$/) do
+  visit '/users/sign_out'
+end
+
+Given(/^I go to the upload snap page$/) do
+  visit '/snaps/new'
+end
+
+Then(/^I should see a login form$/) do
+  expect(page).to have_content('You need to sign in or sign up before continuing.')
+end
+
+Then(/^I should not see upload snap page$/) do 
+  expect(page).not_to have_content('Upload Snap')
+end
