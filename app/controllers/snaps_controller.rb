@@ -7,6 +7,8 @@ class SnapsController < ApplicationController
     @snap = Snap.create( snap_params )
     Pusher.url = "http://ebf8022e11d93168b75f:9b3275e887802da2a9d9@api.pusherapp.com/apps/67729"
     Pusher.trigger('snappygram', 'upload', {id: @snap.id, snap: @snap.image.url(:medium), description: @snap.description})
+    @snap = Snap.new( snap_params.merge(user: current_user) )
+    @snap.save
     redirect_to root_path
   end
 
