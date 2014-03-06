@@ -1,6 +1,6 @@
 
 <div id='snaps'>
-  <% @snaps.reverse.each do |snap| %>
+  <% @snaps.each do |snap| %>
 	  <section class='snap'>
 	  <p>Uploaded by <%= snap.user.username %></p>
 	  <%= snap.description %> <br>
