@@ -1,6 +1,17 @@
 require 'spec_helper'
 
 describe SnapsController do
+  
+  include Devise::TestHelpers
+  before (:each) do
+    @user = User.create!({
+      :email => 'user@test.com',
+      :username => 'testuser',
+      :password => 'pleasepleaseplease',
+      :password_confirmation => 'pleasepleaseplease' 
+      })
+    sign_in @user
+  end
 
   describe "GET 'new'" do
     it "returns http success" do
