@@ -6,4 +6,5 @@
   <a href=<%= show_detail_path(snap) %> id='snap-detail'> <%= image_tag snap.image.url(:medium) %>  </a>
   </li>
   <% end %>
+  <%= will_paginate @snaps %>
 </ul>
