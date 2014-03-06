@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery-ias.min.js
+
+var ias = jQuery.ias({
+  container:  '#snaps',
+  item:       '.snap',
+  pagination: '.pagination',
+  next:       '.next_page'
+});
+
+// Adds a loader image which is displayed during loading
+ias.extension(new IASSpinnerExtension());
+

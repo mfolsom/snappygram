@@ -14,7 +14,7 @@ class SnapsController < ApplicationController
   end
 
   def show
-    @snaps = Snap.all.paginate(:page => params[:page],:per_page => 5)
+    @snaps = Snap.all.paginate(:page => params[:page],:per_page => 2)
   end
 
   def show_detail

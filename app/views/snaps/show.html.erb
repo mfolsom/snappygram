@@ -1,10 +1,13 @@
-<ul>
+
+<div id='snaps'>
   <% @snaps.reverse.each do |snap| %>
-  <li>
-  <p>Uploaded by <%= snap.user.username %></p>
-  <%= snap.description %> <br>
-  <a href=<%= show_detail_path(snap) %> id='snap-detail'> <%= image_tag snap.image.url(:medium) %>  </a>
-  </li>
+	  <section class='snap'>
+	  <p>Uploaded by <%= snap.user.username %></p>
+	  <%= snap.description %> <br>
+	  <a href=<%= show_detail_path(snap) %> id='snap-detail'> <%= image_tag snap.image.url(:medium) %>  </a>
+	  </section>
   <% end %>
+ </div>
+
+
   <%= will_paginate @snaps %>
-</ul>
