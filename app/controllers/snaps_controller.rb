@@ -5,15 +5,13 @@ class SnapsController < ApplicationController
 
   def create
     @snap = Snap.create( snap_params )
-      redirect_to root_path
+    Pusher.url = "http://ebf8022e11d93168b75f:9b3275e887802da2a9d9@api.pusherapp.com/apps/67729"
+    Pusher.trigger('snappygram', 'upload', {id: @snap.id, snap: @snap.image.url(:medium), description: @snap.description})
+    redirect_to root_path
   end
 
   def show
     @snaps = Snap.all
-  end
-
-  def detail
-    render :show_detail
   end
 
   def show_detail

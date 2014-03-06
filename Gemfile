@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'paperclip', '~> 4.1'
 gem 'aws-sdk'
 gem 'devise'
+gem 'pusher'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

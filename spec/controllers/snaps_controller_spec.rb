@@ -9,4 +9,10 @@ describe SnapsController do
     end
   end
 
+  describe "Pusher" do
+    it "receives update" do
+      expect(Pusher).to receive(:trigger)
+      post 'create', {snap: {image: '', description: 'blah'}}
+    end
+  end
 end
