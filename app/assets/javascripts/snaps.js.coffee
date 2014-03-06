@@ -6,14 +6,12 @@ channel = pusher.subscribe('snappygram')
 channel.bind('upload', (data)->
   $('ul').prepend("""
   <li>
+  <p>Uploaded by #{data.user.username}</p>
   #{data.description}<br>
   <a href='/snaps/#{data.id}' id='snap-detail'>
-  <img src="#{data.snap}" /></a> 
+  <img src="#{data.snap}" /></a><br>
   </li>
   """)
 )
 
-#in javascript
-#function(data){}
-#in coffeescript
-#(data)->
+
