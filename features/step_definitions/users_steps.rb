@@ -1,5 +1,5 @@
 Given(/^I register as a new user$/) do
-  visit 'users/sign_up'
+  visit new_user_registration_path
   fill_in('user[email]', :with => 'example@example.com')
   fill_in('user[username]', :with => 'exampleuser')
   fill_in('user[password]', :with => 'password')
@@ -12,7 +12,7 @@ Then(/^I will see a welcome message$/) do
 end
 
 Given(/^I am logged in$/) do
-	visit 'users/sign_up'
+  visit new_user_registration_path
   fill_in('user[email]', :with => 'example@example.com')
   fill_in('user[username]', :with => 'exampleuser')
   fill_in('user[password]', :with => 'password')

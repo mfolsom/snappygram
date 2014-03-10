@@ -4,7 +4,8 @@
 	  <section class='snap'>
 	  <p>Uploaded by <%= snap.user.username %></p>
 	  <%= snap.description %> <br>
-	  <a href=<%= show_detail_path(snap) %> id='snap-detail'> <%= image_tag snap.image.url(:medium) %>  </a>
+	  <a href=<%= show_detail_path(snap) %> id='snap-detail'> <%= image_tag snap.image.url(:medium) %>  </a> <br>
+	  <a href='/charges/new'>Buy Snap</a>
 	  </section>
   <% end %>
  </div>

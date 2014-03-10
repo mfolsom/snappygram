@@ -1,5 +1,6 @@
 Snappygram::Application.routes.draw do
 
+  resources :charges
   devise_for :users
   get "snaps/new"
   post "snaps/new" => "snaps#create"

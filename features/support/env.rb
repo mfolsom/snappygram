@@ -5,6 +5,9 @@
 # files.
 require 'cucumber/rails'
 
+# require 'capybara/poltergeist'
+
+
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
 # selectors in your step definitions to use the XPath syntax.
@@ -55,3 +58,11 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
+ENV['PUBLISHABLE_KEY']='pk_test_UZcExtqYKRVoiMrmfSdgPksj'
+ENV['SECRET_KEY']='sk_test_fMjEF0vn8KLBLnjF6ZHzeY8Y'
+
+Capybara.javascript_driver = :selenium
+
+
+# PUBLISHABLE_KEY='pk_test_UZcExtqYKRVoiMrmfSdgPksj'
+# SECRET_KEY='sk_test_fMjEF0vn8KLBLnjF6ZHzeY8Y'
